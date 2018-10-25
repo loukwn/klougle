@@ -19,8 +19,6 @@ First of all it spawns the spiders that will scrape the sites (using ```Beautifu
 Then the indexer is spawned which will process the content of the links that were downloaded previously (using [NLTK](https://www.nltk.org/)). It will lemmatize the terms, remove the ones from the closed class categories (articles, modals etc.), and will update the index using the new TF-IDF value of every term.
 
 
-<img src="./screens/klougle2.PNG" height="50%">
-
 ## Installation & Usage
 
 It has been tested on a Windows 10 environment with Python 3.6 installed using PyCharm IDE. The package requirements to run this, are listed in the ```requirements.txt``` file.
