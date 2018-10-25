@@ -1,0 +1,84 @@
+#:kivy 1.0.9
+#:import main main
+#:import ListItemButton kivy.uix.listview.ListItemButton
+#:import ListAdapter kivy.adapters.listadapter.ListAdapter
+
+<ListItemButton>:
+    selected_color: 0, 0, 0, 1
+    deselected_color: 0, 0, 0, 1
+    size: (100, '75dp')
+    text_size: self.size
+    padding_x: 20
+    padding_y: 10
+    markup: True
+    on_press: main.open_url(self.text)
+
+<SearchUI>:
+    orientation: 'lr-tb'
+    spacing: 10
+    statusLabel: status_text
+    resultList: result_list
+    searchInput: search_input
+
+    Label:
+        text: '[b]KLougle[/b]'
+        font_size: '20sp'
+        size_hint: (1, None)
+        top: 25
+        height: 100
+        markup: True
+
+    BoxLayout:
+        orientation: 'horizontal'
+        size_hint: (1, None)
+        height: 50
+
+        Widget:
+            size_hint: (None, None)
+            width: 20
+
+        TextInput:
+            id: search_input
+            multiline: False
+            size_hint: (None, None)
+            padding_y: [15, 0]
+            height: 50
+            hint_text: 'Enter search terms'
+            width: root.width - 90
+            on_text_validate: root.go_pressed()
+
+        Button:
+            id: b1
+            size_hint: (None, None)
+            height: 50
+            width: 50
+            text: 'Go'
+            on_press: root.go_pressed()
+
+    BoxLayout:
+        orientation: 'horizontal'
+        size_hint: (1, None)
+        height: 50
+
+        Widget:
+            size_hint: (None, 1)
+            width: 20
+
+        Label:
+            id: status_text
+            size_hint: (None, 1)
+            text: 'Type some search terms and hit "Go"'
+            size: self.texture_size
+
+    ListView:
+        id: result_list
+        padding_x: (10,10)
+        adapter:
+            ListAdapter(data=[], cls = ListItemButton)
+        size_hint: (None, None)
+        width: root.width
+        height: root.height-220
+
+    Widget:
+        size_hint: (1, None)
+        height: 20
