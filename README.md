@@ -1,6 +1,6 @@
 # KLougle
 
-KLougle (any similarity is totally incidental) is an indexing search engine that scrapes data from news sites like [CNN](https://edition.cnn.com/), [BBC](https://www.bbc.com/news) and [The Guardian](https://www.theguardian.com/us) and allows you to perform search queries on the data that it gathers. It was developed as a part of the semester project in my Natural Language Processing class. It is comprised of 2 parts:
+KLougle (any similarity to other well known search engines is totally incidental) is an indexing search engine that scrapes data from news sites like [CNN](https://edition.cnn.com/), [BBC](https://www.bbc.com/news) and [The Guardian](https://www.theguardian.com/us) and allows you to perform search queries on the data it gathers. It was developed as part of the semester project in my Natural Language Processing class. It is comprised of 2 parts:
 
 ## Frontend 
 
