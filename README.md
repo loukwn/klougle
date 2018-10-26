@@ -27,4 +27,6 @@ To run any of the above parts, just execute the corresponding ```main.py``` and 
 
 
 ## License
+This project is uploaded for educational purposes only.
+
 [MIT](https://choosealicense.com/licenses/mit/)
