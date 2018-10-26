@@ -38,9 +38,10 @@ class BBCSpider(BaseSpider):
             parent = doc.find('div', {'class': 'story-body'})
             if not parent:
                 continue
-            possibleNewParent = parent.find('div', {'class': 'story-body__inner'})
-            if possibleNewParent:
-                parent = possibleNewParent
+
+            possible_new_parent = parent.find('div', {'class': 'story-body__inner'})
+            if possible_new_parent:
+                parent = possible_new_parent
             if parent:
                 for p in parent.findAll('p'):
                     content += ' ' + p.text

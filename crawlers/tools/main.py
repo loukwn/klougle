@@ -1,7 +1,7 @@
-from .spiders.cnnspider import CNNSpider
-from .spiders.bbcspider import BBCSpider
-from .spiders.guardianspider import GuardianSpider
-from .indexingtools.indexer import PageIndexer
+from spiders.cnnspider import CNNSpider
+from spiders.bbcspider import BBCSpider
+from spiders.guardianspider import GuardianSpider
+from indexingtools.indexer import PageIndexer
 
 if __name__ == "__main__":
 
